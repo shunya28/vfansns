@@ -6,7 +6,7 @@ const port = 8080;
 const app = express();
 
 app.get('/', (req, res) => {
-    res.render('hello.ejs');
+    res.render('index.ejs');
 });
 
 app.listen(port, hostname, () => {
