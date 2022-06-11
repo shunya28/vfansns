@@ -1,9 +1,17 @@
 const http = require('http');
 const express = require('express');
+const mysql = require('mysql');
 
 const hostname = '0.0.0.0';
 const port = 8080;
 const app = express();
+
+const connection = mysql.createConnection({
+    host: 'localhost',
+    user: 'test',
+    password: '',
+    database: 'vfansns'
+});
 
 app.get('/', (req, res) => {
     res.render('index.ejs');
